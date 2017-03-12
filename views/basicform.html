@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+    <title>Basic Form</title>
+  </head>
+  <body>
+    <form class="" action="../php/basicform.php" method="post">
+      <fieldset>
+        <legend>Register yourself</legend><br><span>email:</span>
+      <input type="email" name="mail" value="-" autofocus="" required=""><br><span>password:</span>
+      <input type="password" name="pass" maxlength="20" required=""><br><span>Gender:</span>
+      <input type="radio" name="gender" value="men" checked>
+      <input type="radio" name="gender" value="women"><br><span>Age:</span>
+      <input type="number" name="age" min="7" max="99" required=""><br><span>Your favourite FF </span>
+      <select name="game">
+        <option value="I">Final Fantasy I</option>
+        <option value="II">Final Fantasy II</option>
+        <option value="III">Final Fantasy III</option>
+        <option value="VI">Final Fantasy VI</option>
+        <option value="V">Final Fantasy V</option>
+        <option value="VI">Final Fantasy VI</option>
+        <option value="VII">Final Fantasy VII</option>
+        <option value="VII">Final Fantasy VIII</option>
+        <option value="IX">Final Fantasy IX</option>
+        <option value="X">Final Fantasy X</option>
+      </select><br>
+      <textarea name="about" rows="15" cols="40" placeholder="Something funny if it´s possible...">Tell us something about you</textarea><br>
+      <input type="checkbox" name="condition" required=""><span>Accept our conditions.</span><br>
+      <input type="checkbox" name="premium" disabled><span>Select if yow want to be a premium user.</span><br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear">
+
+      </fieldset>
+    </form>
+
+  </body>
+</html>
