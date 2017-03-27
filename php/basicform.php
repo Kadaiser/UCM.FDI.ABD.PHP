@@ -5,7 +5,7 @@
     <title>Response from Basic Form</title>
   </head>
   <body>
-    <?php echo "The server have process the follow information:"; ?>
+    <?php echo "The server have process the follow information:"; ?><br>
     <span>Mail:</span>
     <?php echo $_POST["mail"]; ?><br><span>Password:</span>
     <?php echo $_POST["pass"]; ?><br><span>Gender:</span>
