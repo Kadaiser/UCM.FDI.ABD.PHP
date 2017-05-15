@@ -47,7 +47,7 @@
 
       <div id="page">
         <div class="post">
-    			<h2 class="title"><a href="#">Melómano detectado!! </a></h2>
+    			<h2 class="title">Melómano detectado!!</h2>
     			<div class="entry">
     				<p>Esto es <strong>Zone Music</strong>. La única forma de que hallas llegado hasta aqui se debe a tu condición de <a href="https://definicion.de/melomano/" rel="nofollow">melómano</a>.
     				En esta web encontraras a otros usuarios, que como tu, compartis una insaciable sed musical. Si eres de los que cuando te tiran de la lengua solo eres capaz de hablar de géneros musicales,

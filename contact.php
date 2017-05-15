@@ -61,7 +61,7 @@
             <div class="group">
               <input type="email"
                     name="nickName" id="userEmail" class="field"
-                    required autofocus>
+                    required>
               <span class="highlight"></span><span class="bar"></span>
               <label id="emailLabel">Email</label>
             </div>

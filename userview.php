@@ -11,7 +11,7 @@ if(!isset($_SESSION['login'])){
   <head>
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Login</title>
+    <title>Zone Music - <?php echo $_SESION['nick'] ?></title>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
   	<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
   	<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />

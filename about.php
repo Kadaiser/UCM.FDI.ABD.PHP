@@ -5,7 +5,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Zone Music</title>
+	<title>Zone Music - About</title>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
 	<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -46,7 +46,7 @@
 
       <div id="page">
         <div class="post">
-    			<h2 class="title"><a href="#">Conocenos, y conoce tus derechos</a></h2>
+    			<h2 class="title">Conocenos, y conoce tus derechos</h2>
     			<div class="entry">
     				<p>En <strong>Zone Music</strong>, creemos importante que la gente este a gusto con nuestro servicio, eso implica además de cubrir
               las necesidades de uso, accesibilidad e intuitividad propias de una página moderna, también nos hagamos responsables de nuestros usuarios.

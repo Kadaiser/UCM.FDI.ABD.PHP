@@ -10,7 +10,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Zone Music</title>
+	<title>Zone Music - Fail</title>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
 	<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -26,7 +26,7 @@
     			</div>
     			<div id="menu">
     				<ul>
-              <li class="current_page_item"><a href="./singup.php">Register</a></li>
+              <li class="current_page_item"><a href="./signup.php">Register</a></li>
               <li class="current_page_item"><a href="./login.php">Login</a></li>
     					<li><a href="./about.php">About</a></li>
     					<li><a href="./contact.php">Contact</a></li>
@@ -42,7 +42,7 @@
 
       <div id="page">
         <div class="post">
-    			<h2 class="title"><a href="#">UOPS!! Falló la pagina... </a></h2>
+    			<h2 class="title">UOPS!! Falló la pagina...</h2>
     			<div class="entry">
     				<p>Vale, esto es un poco embarazoso...<strong> ¡Porque no sabemos qué ha fallado!</strong>
                Podría deberse a un amplio abanico de posibilidades, desde caídas en el servidor, error en la Base de Datos, un script no compatible

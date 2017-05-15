@@ -42,7 +42,7 @@
 
       <div id="page">
         <div class="post">
-    			<h2 class="title"><a href="#">UOPS!! Fallo el login... </a></h2>
+    			<h2 class="title">UOPS!! Fallo el login...</h2>
     			<div class="entry">
     				<p>Esto significa que o bien tu usuario o contraseña son erroneos o pero aun...<strong>Aun no estas registrado en Zone Music</strong>.
                Si es asi, deberias <a href="./singup.php">registrarte</a> primero para poder hacer uso de nuestros servicios. Si por el contrario
