@@ -211,8 +211,13 @@ a:hover {
 }
 
 #menu .current_page_item a {
-	background: #EE5058;
+	background: #0047b3;
 	border-radius: 5px;
+}
+#menu .logout_page_item a {
+	background:#993300;
+	border-radius: 5px;
+	color: black;
 }
 
 /* Page */
@@ -463,9 +468,9 @@ a:hover {
 /* Footer */
 
 #footer {
-	height: 140px;
+	height: 30px;
 	margin: 0 auto;
-	padding: 50px 0 15px 0;
+	padding: 20px 0 15px 0;
 	font-family: 'Abel', sans-serif;
 	border: 1px solid #171717;
 }

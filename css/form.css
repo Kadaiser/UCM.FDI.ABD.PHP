@@ -1,0 +1,106 @@
+form {
+  margin: 10px auto;
+	width: 600px;
+	padding: 3%;
+	background: #121212;
+	border: 2px solid #001f4d;
+  border-radius: 4px;
+}
+
+.group {
+	position: relative;
+	margin: 30px 30px auto;
+	text-align: center;
+}
+
+.group input {
+	padding: 10px 10px 10px 10px;
+	-webkit-appearance: none;
+	display: block;
+	color: #0052cc;
+	width: 95%;
+	border: none;
+	border-radius: 2px;
+	border-bottom: 1px solid #777;
+}
+
+.group input:focus { outline: none; }
+
+
+/* Label */
+
+.group label {
+	color: #0052cc;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: all 0.2s ease;
+}
+
+.group .button{
+
+  background: #8E8E8E;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* active */
+
+input:focus ~ label, input:valid ~ label, input:disabled ~ label {
+	animation:mymove 0.2s;
+	animation-fill-mode: forwards;
+    -webkit-animation: mymove 0.2s; /*Safari and Chrome*/
+	-webkit-animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+    from {top: 0px; left: 0px; transform: scale(1);	color: #1a75ff;}
+    to {top: -20px; left: -2px; transform: scale(.75); color: #0052cc;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/ {
+    from {top: 0px; left: 0px; transform: scale(1); color: #1a75ff;}
+    to {top: -20px; left: -2px; transform: scale(.75); color: #0052cc;}
+}
+
+
+
+/* Underline */
+
+.bar {
+	position: relative;
+	display: block;
+  margin: 0;
+	width: 98%;
+}
+
+.bar:before, .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: blue;
+	transition: all 0.3s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+
+/* Animations */
+
+@keyframes inputHighlighter {
+	from { width: 30%; background: #0052cc; }
+	to 	{ width: 0; background: transparent; }
+}
