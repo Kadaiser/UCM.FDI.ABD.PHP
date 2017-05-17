@@ -18,7 +18,7 @@
       <h2>Terminos y condiciones</h2>
       <ul class="style1">
         <li class="first"><a href="./contact.php">Conoce como trabajamos</a></li>
-        <li><a href="https://wwww.pisense.me/">Otro de nuestros proyectos</a></li>
+        <li><a href="https://www.pisense.me/">Otro de nuestros proyectos</a></li>
     </div>
   </div>
 </div>

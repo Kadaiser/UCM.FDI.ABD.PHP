@@ -69,17 +69,10 @@
 					<p class="button"><a href="http://www.agpd.es/portalwebAGPD/CanalDelCiudadano/derechos/principales_derchos/index-ides-idphp.php">Saber más</a></p>
 				</div>
 				<div id="column2">
-					<h2>Esta página</h2>
-					<p><img src="images/img07.jpg" width="300" height="150" alt="" /></p>
+					<h2>El Acuerdo</h2>
+					<p><img src="images/img09.jpg" width="300" height="150" alt="" /></p>
 					<p>Solo para dejarlo meridianamente claro. Esta web ha sido diseñada y creada como parte de un trabajo obligatorio para una materia de la carrera. No ha sido
 					creado para ser usada en entronos de produccion real.</p>
-				</div>
-				<div id="column3">
-					<h2>Los Grupos</h2>
-					<p><img src="images/img08.jpg" width="300" height="150" alt="" /></p>
-					<p>Si algunos usuarios estan en sintonia con tu pensamiento sobre la musica, lo mejor que podeis hacer es compartir vuestros mensajes directamente entre vosotros,
-						selecciona tu grupo favorito y comparte tus inquietudes con sus integrantes</p>
-					<p class="button"><a href="#">Mostrar</a></p>
 				</div>
 			</div>
 

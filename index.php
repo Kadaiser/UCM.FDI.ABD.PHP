@@ -60,22 +60,22 @@
 				<div id="column1">
 					<h2>¡Hazte oir!</h2>
 					<p><img src="images/img06.jpg" width="300" height="150" alt="" /></p>
-					<p>Puedes enviar tus mensajes a los usuarios de la plataforma, con ello puedes promocionar tus obras, proponer preguntas, romper los esquemas!!
-						En todo caso, si tu objetivo es comunicarte con los demas usuarios, registrate y empiza a disfrutar de los servicios de la web</p>
-					<p class="button"><a href="#">Registrame</a></p>
+					<p>Envia mensajes a los usuarios de la plataforma. Puedes promocionar tus obras, proponer preguntas, romper los esquemas!
+						En todo caso, si tu objetivo es comunicarte con los demas usuarios, registrate y empieza a disfrutar de los servicios de la web</p>
+					<p class="button"><a href="./signup.php">Registrame</a></p>
 				</div>
 				<div id="column2">
 					<h2>Otros usuarios</h2>
 					<p><img src="images/img07.jpg" width="300" height="150" alt="" /></p>
-					<p>¿Quieres intercambiar mensajes privados entre otros usuarios? Si resulta que deseas proponer un plan o proyecto a alguien en particulas, la plataforma permite
-						filtar tus destinatarios demanera trasparente al resto de miembros del portal</p>
+					<p>¿Quieres intercambiar mensajes privados entre otros usuarios? Si resulta que deseas proponer un plan o proyecto a alguien en particular,
+						la plataforma permite filtar tus destinatarios de manera trasparente al resto de miembros del portal. Disfruta de tus convesaciones privadas</p>
 				</div>
 				<div id="column3">
 					<h2>Los Grupos</h2>
 					<p><img src="images/img08.jpg" width="300" height="150" alt="" /></p>
 					<p>Si algunos usuarios estan en sintonia con tu pensamiento sobre la musica, lo mejor que podeis hacer es compartir vuestros mensajes directamente entre vosotros,
 						selecciona tu grupo favorito y comparte tus inquietudes con sus integrantes</p>
-					<p class="button"><a href="#">Mostrar</a></p>
+					<p class="button"><a href="./groups.php">Mostrar</a></p>
 				</div>
 			</div>
 
