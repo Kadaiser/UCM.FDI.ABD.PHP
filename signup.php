@@ -1,5 +1,21 @@
 <?php
 session_start();
+$DBconnection = mysqli_connect('127.0.0.1','root','','pisense');
+
+if($DBconnection) {
+  $sqlroom = 'SELECT id,name FROM genres';
+  $queryRoom = mysqli_query($DBconnection,$sqlroom);
+
+  $optionRoom='';
+  while ($row = $queryRoom->fetch_array()) {
+    $optionRoom.='<option value="'.$row['id'].'">'.$row['name'].'</option>';
+  }
+  mysqli_close($DBconnection);
+}else{
+  mysqli_close($DBconnection);
+  echo 'UOPSS! '.mysqli_error();
+}
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +38,7 @@ session_start();
     			</div>
     			<div id="menu">
     				<ul>
-    					<li class="current_page_item"><a href="signup.php">Register</a></li>
+    					<li class="current_page_item"><a href="login.php">Login</a></li>
     					<li><a href="./about.php">About</a></li>
     					<li><a href="./contact.php">Contact</a></li>
               <?php
@@ -79,6 +95,13 @@ session_start();
                       required>
                 <span class="highlight"></span><span class="bar"></span>
                 <label id="confirmPasswordLabel">Confirmar Contraseña</label>
+              </div>
+
+              <div class="group">
+                <option disabled selected value>-- selecciona --</option>
+                <?php echo $optionRoom;?>
+                <span class="highlight"></span><span class="bar"></span>
+                <label id="NickLabel">Tu rollo</label>
               </div>
 
               <div class="group">

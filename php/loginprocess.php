@@ -24,8 +24,9 @@
       if (password_verify($userPassword,$user->pass)) {
         if(mysqli_num_rows($query)!==0){
           $_SESSION['login'] = true;
-          $_SESSION['nick']=$nick;
-          $_SESSION['userEmail']=$userEmail;
+          $_SESSION['isAdmin'] = $user->isAdmin;
+          $_SESSION['nick']= $user->nick;
+
 
           header("Location: ../userview.php");
 
