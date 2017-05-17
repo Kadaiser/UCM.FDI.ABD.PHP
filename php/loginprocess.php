@@ -6,6 +6,7 @@
   $userPassword = htmlspecialchars(trim(strip_tags($_POST['userPassword'])));
 
   $conection = mysqli_connect('127.0.0.1','root','','melomanos');
+  mysqli_set_charset( $connection, 'utf8');
 
   if($conection){
     $sql = "
