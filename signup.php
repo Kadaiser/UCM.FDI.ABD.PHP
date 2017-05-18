@@ -1,9 +1,10 @@
 <?php
 session_start();
-$DBconnection = mysqli_connect('127.0.0.1','root','','pisense');
+$DBconnection = mysqli_connect('127.0.0.1','root','','melomanos');
+mysqli_set_charset( $DBconnection, 'utf8');
 
 if($DBconnection) {
-  $sqlroom = 'SELECT id,name FROM genres';
+  $sqlroom = 'SELECT id,name FROM genres ORDER BY name DESC';
   $queryRoom = mysqli_query($DBconnection,$sqlroom);
 
   $optionRoom='';
@@ -98,8 +99,10 @@ if($DBconnection) {
               </div>
 
               <div class="group">
-                <option disabled selected value>-- selecciona --</option>
-                <?php echo $optionRoom;?>
+                <select class="" name="">
+                  <option disabled selected value>-- selecciona --</option>
+                  <?php echo $optionRoom;?>
+                </select>
                 <span class="highlight"></span><span class="bar"></span>
                 <label id="NickLabel">Tu rollo</label>
               </div>

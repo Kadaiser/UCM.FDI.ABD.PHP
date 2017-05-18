@@ -66,7 +66,7 @@
 					<h2>Derechos ARCO</h2>
 					<p><img src="images/imgARCO.jpg" width="300" height="150" alt="" /></p>
 					<p>Eres propietario de tus datos, y por consecuencia estos son tus derechos. Conócelos y ejecútalos si los crees necesario, o quieres darte de baja.</p>
-					<p class="button"><a href="http://www.agpd.es/portalwebAGPD/CanalDelCiudadano/derechos/principales_derchos/index-ides-idphp.php">Saber más</a></p>
+					<p class="button"><a target="_blank"  href="http://www.agpd.es/portalwebAGPD/CanalDelCiudadano/derechos/principales_derchos/index-ides-idphp.php">Saber más</a></p>
 				</div>
 				<div id="column2">
 					<h2>El Acuerdo</h2>
