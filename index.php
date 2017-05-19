@@ -61,7 +61,7 @@
 					<h2>¡Hazte oir!</h2>
 					<p><img src="images/img06.jpg" width="300" height="150" alt="" /></p>
 					<p>Envia mensajes a los usuarios de la plataforma. Puedes promocionar tus obras, proponer preguntas, romper los esquemas!
-						En todo caso, si tu objetivo es comunicarte con los demas usuarios, registrate y empieza a disfrutar de los servicios de la web</p>
+						Si tu objetivo es comunicarte con los demas usuarios, registrate y empieza a disfrutar de los servicios de la web</p>
 					<p class="button"><a href="./signup.php">Registrame</a></p>
 				</div>
 				<div id="column2">

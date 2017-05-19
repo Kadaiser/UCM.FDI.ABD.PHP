@@ -3,12 +3,12 @@
   mysqli_set_charset( $DBconnection, 'utf8');
 
   if($DBconnection) {
-    $sqlroom = 'SELECT id,name FROM genres ORDER BY name DESC';
-    $queryRoom = mysqli_query($DBconnection,$sqlroom);
+    $sqlRollo = 'SELECT id,name FROM genres ORDER BY name DESC';
+    $queryRollo = mysqli_query($DBconnection,$sqlRollo);
 
-    $optionRoom='';
-    while ($row = $queryRoom->fetch_array()) {
-      $optionRoom.='<option value="'.$row['id'].'">'.$row['name'].'</option>';
+    $optionRollo='';
+    while ($row = $queryRollo->fetch_array()) {
+      $optionRollo.='<option value="'.$row['id'].'">'.$row['name'].'</option>';
     }
     mysqli_close($DBconnection);
   }else{
