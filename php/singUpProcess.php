@@ -6,6 +6,8 @@
   $nick = htmlspecialchars(trim(strip_tags($_POST['nickName'])));
   $userPassword = htmlspecialchars(trim(strip_tags($_POST['userPassword'])));
 	$userConfirmPassword = htmlspecialchars(trim(strip_tags($_POST['userConfirmPassword'])));
+	//$userGenre = htmlspecialchars(trim(strip_tags($_POST['genre'])));
+	$userGenre = $_POST['genre'];
 	$born = $_POST['bornDate'];
 
 	if($userPassword != $userPassword){
@@ -37,6 +39,13 @@
 		            VALUES (NULL, '$nick', '$password_hash', '0', CURRENT_TIMESTAMP, '$born')
 		            ";
 				if(mysqli_query($conection,$sqlInsert)){
+
+					$sqlGenreInsert = "INSERT INTO usergenres (`idUser`,`idGenre`)
+															VALUES ((SELECT id FROM users ORDER BY id DESC LIMIT 1 ),'$userGenre')
+					";
+					mysqli_query($conection,$sqlGenreInsert);
+
+
 					mysqli_close($conection);
 					header("Location: ../index.php");
 

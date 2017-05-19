@@ -1,5 +1,4 @@
 <?php
-
   session_start();
 
   $nick = htmlspecialchars(trim(strip_tags($_POST['nickName'])));
@@ -9,10 +8,11 @@
   mysqli_set_charset( $connection, 'utf8');
 
   if($conection){
-    $sql = "
-            SELECT nick,pass
-            FROM users
-            WHERE nick='".$nick."'
+    $sql = "SELECT users.nick, users.pass, genres.name
+            FROM users JOIN usergenres
+            ON users.id = usergenres.idUser
+            JOIN genres ON genres.id = usergenres.idGenre
+            WHERE users.nick='".$nick."'
             ";
 
     $query = mysqli_query($conection,$sql);
@@ -21,11 +21,14 @@
       mysqli_close($conection);
       $user=mysqli_fetch_object($query);
 
+
+
       if (password_verify($userPassword,$user->pass)) {
         if(mysqli_num_rows($query)!==0){
           $_SESSION['login'] = true;
           $_SESSION['isAdmin'] = $user->isAdmin;
           $_SESSION['nick']= $user->nick;
+          $_SESSION['rollo'] = $user->name;
 
 
           header("Location: ../userview.php");

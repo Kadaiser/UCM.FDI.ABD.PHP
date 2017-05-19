@@ -4,7 +4,7 @@ if(!isset($_SESSION['login'])){
   header("Location: ../fail.php");
 }
 
-
+include "./php/populateRollo.php"
 
 ?>
 
@@ -14,7 +14,7 @@ if(!isset($_SESSION['login'])){
   <head>
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Zone Music - <?php echo $_SESION['nick']; ?></title>
+    <title>Zone Music - User</title>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
   	<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
   	<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -47,7 +47,23 @@ if(!isset($_SESSION['login'])){
         <div class="post">
     			<h2 class="title"><a href="#">Bienvenido <?php echo $_SESSION['nick']; ?> </a></h2>
     			<div class="entry">
+            <p>Tu rollo es el <?php echo $_SESSION['rollo'] ?></p>
+    			</div>
+          <div class="entry">
             <p>Estas son las cosas que han estado ocurriendo mientras estabas fuera</p>
+    			</div>
+    		</div>
+        <br>
+        <div class="post">
+    			<div class="entry">
+            <p>Me gustaria cambiar mi rollo a </p>
+            <form class="" action="./php/setRolloInUser.php" method="post">
+              <select name="genre">
+                <option disabled selected value>-- selecciona --</option>
+                <?php echo $optionRoom;?>
+              </select>
+              <input type="submit">
+            </form>
     			</div>
     		</div>
       </div>
