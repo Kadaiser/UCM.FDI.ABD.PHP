@@ -1,42 +1,6 @@
 <?php session_start();
 
-	$conection = mysqli_connect('127.0.0.1','root','','melomanos');
-	if($conection){
-		$sql  = 'SELECT name, numVisitas,img
-							FROM groups
-							ORDER BY numVisitas DESC LIMIT 1';
-		$query = mysqli_query($conection,$sql);
-
-		if($query){
-			$visited=mysqli_fetch_object($query);
-			$nameVisited= $visited->name;
-			$visitValue=	$visited->numVisitas;
-			$imgVisited= $visited->img;
-		}else{
-			mysqli_close($conection);
-			header("Location: ../fail.php");
-		}
-		$sql2  = 'SELECT name, numMiembros,img
-							FROM groups
-							ORDER BY numMiembros DESC LIMIT 1';
-		$queryNumerous = mysqli_query($conection,$sql2);
-
-		if($queryNumerous){
-			$numerous=mysqli_fetch_object($queryNumerous);
-			$nameNumeros= $numerous->name;
-			$menmbersValue=	$numerous->numMiembros;
-			$imgNumerous= $numerous->img;
-
-			mysqli_close($conection);
-		}else{
-			mysqli_close($conection);
-			header("Location: ../fail.php");
-		}
-	}else{
-		mysqli_close($conection);
-		header("Location: ../fail.php");
-	}
-
+	include "./php/groupsInfo.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -50,7 +14,6 @@
 	<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
-	<body>
     <div id="wrapper">
 
       <div id="header-wrapper">
@@ -89,9 +52,9 @@
     			<h2 class="title">Zona de Grupos</h2>
     			<div class="entry">
     				<p>
-							El punto de encuentro de los usurios de la web. Las notas tiene que estar en una partitura adecuada para sonar bien. Encuentra aqui tu sintonia.
-							Puedes pertenecer a multiples grupos si asi lo deseas. Al formar parte de un grupo, recibiras en tu dashboard personal los mensajes emitidos para
-							el grupo en cuestión. Puedes subscribirte o abandonar grupos a placer con un simple click.
+							El punto de encuentro de los usurios de la web. Las notas tienen que estar en una partitura adecuada para sonar bien. Encuentra aqui tu sintonia.
+							Al formar parte de un grupo, recibiras en tu dashboard personal los mensajes emitidos para el grupo en cuestión. Puedes subscribirte o abandonar
+							grupos a placer con un simple click.
 						</p>
     			</div>
     		</div>
@@ -116,11 +79,29 @@
 				<div id="column3">
 					<h2>El mas viejo</h2>
 					<p><img src="images/img08.jpg" width="300" height="150" alt="" /></p>
-					<p>No nos referimos a su antiguedad en la pagina, si no a la media de la edad mas elevada. Este grupo es para gente experimentada, que con la edad
-					ha refinado mucho su gusto, y este es su grupo favorito.</p>
+					<p>Poseedor de la media de la edad mas elevada. Este grupo es para gente experimentada, que con la edad
+					ha refinado mucho su gusto. Y este es su grupo favorito!</p>
 					<p class="button"><a href="./groups.php">Muestramelo</a></p>
 				</div>
 			</div>
+
+			<div id="page">
+        <div class="post">
+    			<div class="entry">
+    				<?php
+						for ($i=0; $i < 2; $i++) {
+							echo "<div class=".'GroupBoard'.">";
+							echo "<h3>".$rows[$i][0]."</h3>";
+							echo "<h4>Miembros: ".$rows[$i][1]."</h4>";
+							echo "<h4>Rango de Edad: [".strval($rows[$i][2])."] - [".strval($rows[$i][3])."]</h4>";
+							echo "<p class=".'button'."><a href=".'./groups.php'.">Muestramelo</a></p>";
+							echo "</div>";
+						}
+
+						 ?>
+    			</div>
+    		</div>
+      </div>
 
     </div>
 

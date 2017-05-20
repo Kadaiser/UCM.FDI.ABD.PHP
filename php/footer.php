@@ -17,7 +17,7 @@
     <div id="fbox3">
       <h2>Terminos y condiciones</h2>
       <ul class="style1">
-        <li class="first"><a href="./contact.php">Conoce como trabajamos</a></li>
+        <li class="first"><a href="./about.php">Conoce como trabajamos</a></li>
         <li><a target="_blank" href="https://www.pisense.me/">Otro de nuestros proyectos</a></li>
     </div>
   </div>

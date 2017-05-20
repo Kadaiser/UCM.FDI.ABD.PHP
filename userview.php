@@ -6,7 +6,7 @@ if(!isset($_SESSION['login'])){
 
 include "./php/populateRollo.php";
 include "./php/populatePeople.php";
-
+include "./php/getGroupFromUser.php";
 ?>
 
 
@@ -48,7 +48,7 @@ include "./php/populatePeople.php";
         <div class="post">
     			<h2 class="title"><a href="#">Bienvenido <?php echo $_SESSION['nick']; ?> </a></h2>
     			<div class="entry">
-            <p>Tu rollo es el <?php echo $_SESSION['rollo'] ?></p>
+            <p>Tu rollo es el <?php echo $_SESSION['rollo'];?></p>
     			</div>
           <div class="entry">
             <p>Estas son las cosas que han estado ocurriendo mientras estabas fuera</p>
@@ -63,6 +63,7 @@ include "./php/populatePeople.php";
       </div>
 
       <div id="featured-content">
+
 				<div id="column1">
 					<h2>Susurro</h2>
 
@@ -92,10 +93,43 @@ include "./php/populatePeople.php";
 					</form>
 				</div>
 
-				<div id="column2">
-					<h2>Grupo: <?php echo "El que sea valla!!"; ?></h2>
-					<p><img src="images/img07.jpg" width="300" height="150" alt="" /></p>
-				</div>
+
+        <div id="column2">
+          <?php if (mysqli_num_rows($queryGroup)) { ?>
+
+            <h2>Al grupo</h2>
+            <form action="../php/senMail.php" method="post">
+
+              <div class="group">
+                <label>Para </label><br>
+                <select name="to" required>
+                  <option disabled selected value>--</option>
+                  <?php echo $optionGroup;?>
+                </select>
+              </div>
+
+              <input type="hidden" name="topic" value="<?php echo $_SESSION['nick'] ?> comenta">
+
+              <div class="group">
+                <label>Mensaje</label>
+                <textarea name="content" rows="6" cols="20" placeholder="Gente escuchad..." required></textarea>
+              </div>
+
+              <div class="group">
+                <input type="submit" name="" value="Enviar">
+              </div>
+            </form>
+
+          <?php }else{ ?>
+
+            <h2>Sin grupos</h2>
+            <p>Parece que aun no perteneces a ningun grupo, pásate a visitar a los grupos disponibles en
+            <strong>Zone Music</strong>, puedes formar parte de de tantos grupos como quieras, y enviar mensajes
+            a todos los intengrantes de un unico movimiento.</p>
+            <p class="button"><a href="./groups.php">Venga</a></p>
+
+            <?php  }?>
+        </div>
 
 				<div id="column3">
 					<h2>Cambiar tu royo</h2>
