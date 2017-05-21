@@ -88,23 +88,20 @@
 			<div id="page">
         <div class="post">
     			<div class="entry">
-    				<?php
-						for ($i=0; $i < 2; $i++) {
-							echo "<div class=".'GroupBoard'.">";
-							echo "<h3>".$rows[$i][0]."</h3>";
-							echo "<h4>Miembros: ".$rows[$i][1]."</h4>";
-							echo "<h4>Rango de Edad: [".strval($rows[$i][2])."] - [".strval($rows[$i][3])."]</h4>";
-							echo "<p class=".'button'."><a href=".'./groups.php'.">Muestramelo</a></p>";
-							echo "</div>";
-						}
-
+						<?php
+							for ($i=0; $i < 2; $i++) {
+								echo '<div class="GroupBoard">';
+								echo "<p>".$rows[$i][0]."</p>";
+								echo "<p>Miembros: ".$rows[$i][1]."</p>";
+								echo "<p>Rango de Edad: [".strval($rows[$i][2])."] - [".strval($rows[$i][3])."]</p>";
+								echo '<p class="button"><a href="groupview.php?id='.strval($rows[$i][4]).'">Muestramelo</a></p>';
+								echo '</div>';
+							}
 						 ?>
     			</div>
     		</div>
       </div>
-
-    </div>
-
+		</div>
     <?php include "./php/footer.php" ?>
 
   </body>

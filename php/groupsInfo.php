@@ -26,7 +26,7 @@
     $imgNumerous= $numerous->img;
 
 
-    $sqlList = 'SELECT name, numMiembros, minAge, maxAge
+    $sqlList = 'SELECT name, numMiembros, minAge, maxAge, id
                 FROM groups';
 
     $queryList = mysqli_query($connection,$sqlList) or die(header("Location: ../fail.php"));

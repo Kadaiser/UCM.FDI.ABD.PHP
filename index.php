@@ -11,7 +11,6 @@
 	<link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
-	<body>
     <div id="wrapper">
 
       <div id="header-wrapper">
@@ -78,10 +77,7 @@
 					<p class="button"><a href="./groups.php">Mostrar</a></p>
 				</div>
 			</div>
-
     </div>
-
     <?php include "./php/footer.php" ?>
-
   </body>
 </html>

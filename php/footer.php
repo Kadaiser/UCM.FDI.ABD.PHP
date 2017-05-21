@@ -19,9 +19,11 @@
       <ul class="style1">
         <li class="first"><a href="./about.php">Conoce como trabajamos</a></li>
         <li><a target="_blank" href="https://www.pisense.me/">Otro de nuestros proyectos</a></li>
+        </ul>
     </div>
   </div>
 </div>
+
 <div id="footer">
   <p>&copy; Zone Music. Un trabajo para la asignatura de ABD. <a target="_blank" href="https://informatica.ucm.es/">FDI</a> - <a target="_blank" href="https://www.ucm.es/">UCM</a></p>
 </div>
