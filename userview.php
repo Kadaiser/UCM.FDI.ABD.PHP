@@ -67,28 +67,32 @@ include "./php/getGroupFromUser.php";
 				<div id="column1">
 					<h2>Susurro</h2>
 
-					<form action="../php/senMail.php" method="post">
+					<form action="../php/sendMail.php" method="post">
+
+            <input type="hidden" name="from" value="<?php echo $_SESSION['idUser'] ?>">
+            <input type="hidden" name="toGroup" value=NULL>
 
             <div class="group">
             <label>Para </label><br>
             <select name="to" required>
               <option disabled selected value>--</option>
+              <option  value="0">TODOS</option>
               <?php echo $optionPeople;?>
             </select>
             </div>
 
             <div class="group">
               <label>Asunto</label><br>
-              <input type="text" name="topic" value="" required>
+              <input type="text" name="topic" required>
             </div>
 
             <div class="group">
               <label>Mensaje</label>
-              <textarea name="content" rows="6" cols="20" placeholder="Te comento..."></textarea>
+              <textarea name="content" rows="6" cols="20" placeholder="Te comento..." required></textarea>
             </div>
 
             <div class="group">
-              <input type="submit" name="" value="Enviar">
+              <input type="submit" value="Enviar">
             </div>
 					</form>
 				</div>
@@ -98,11 +102,14 @@ include "./php/getGroupFromUser.php";
           <?php if (mysqli_num_rows($queryGroup)) { ?>
 
             <h2>Al grupo</h2>
-            <form action="../php/senMail.php" method="post">
+            <form action="../php/sendMail.php" method="post">
+
+              <input type="hidden" name="from" value="<?php echo $_SESSION['idUser'] ?>">
+              <input type="hidden" name="to" value=NULL>
 
               <div class="group">
                 <label>Para </label><br>
-                <select name="to" required>
+                <select name="toGroup" required>
                   <option disabled selected value>--</option>
                   <?php echo $optionGroup;?>
                 </select>
@@ -116,7 +123,7 @@ include "./php/getGroupFromUser.php";
               </div>
 
               <div class="group">
-                <input type="submit" name="" value="Enviar">
+                <input type="submit" value="Enviar">
               </div>
             </form>
 
@@ -147,9 +154,6 @@ include "./php/getGroupFromUser.php";
           </form>
 				</div>
 			</div>
-
-
-
     </div>
 
     <?php include "./php/footer.php" ?>

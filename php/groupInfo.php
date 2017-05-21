@@ -23,7 +23,7 @@
               SET numVisitas = numVisitas + 1
               WHERE id ='.$idGroup.'
             ';
-    mysqli_query($connection,$sqlUp) or die(header("Location: ../fail2.php"));
+    mysqli_query($connection,$sqlUp) or die(header("Location: ../fail.php"));
 
 
     mysqli_close($connection);
