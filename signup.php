@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "./php/populateRollo.php"
+include "./php/populateRollo.php";
 
  ?>
 <!DOCTYPE html>
@@ -86,7 +86,7 @@ include "./php/populateRollo.php"
               <div class="group">
                 <select name="genre">
                   <option disabled selected value>-- selecciona --</option>
-                  <?php echo $optionRoom;?>
+                  <?php echo $optionRollo;?>
                 </select>
                 <span class="highlight"></span><span class="bar"></span>
                 <label id="NickLabel">Tu rollo</label>
@@ -106,6 +106,5 @@ include "./php/populateRollo.php"
     </div>
 
     <?php include "./php/footer.php" ?>
-
   </body>
 </html>

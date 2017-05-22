@@ -591,8 +591,9 @@ ul.style1 .first {
 
 .GroupBoard {
 	float: left;
+	padding: 2px 2px 2px 4px;
 	font-size: 15px;
-	width: 150px;
+	width: 155px;
 	height: 180px;
 	margin: 10px;
 	background: #121212;

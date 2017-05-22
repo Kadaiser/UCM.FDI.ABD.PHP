@@ -3,7 +3,7 @@
   or die(header("Location: ../fail.php"));
   mysqli_set_charset( $connection, 'utf8');
 
-    $sql  = 'SELECT name, numVisitas,img
+    $sql  = 'SELECT name, numVisitas, img, id
               FROM groups
               ORDER BY numVisitas DESC LIMIT 1';
 
@@ -13,8 +13,9 @@
     $nameVisited= $visited->name;
     $visitValue=	$visited->numVisitas;
     $imgVisited= $visited->img;
+    $idVisited= $visited->id;
 
-    $sql2  = 'SELECT name, numMiembros,img
+    $sql2  = 'SELECT name, numMiembros,img, id
               FROM groups
               ORDER BY numMiembros DESC LIMIT 1';
 
@@ -24,6 +25,7 @@
     $nameNumeros= $numerous->name;
     $menmbersValue=	$numerous->numMiembros;
     $imgNumerous= $numerous->img;
+    $idNumerous= $numerous->id;
 
 
     $sqlList = 'SELECT name, numMiembros, minAge, maxAge, id

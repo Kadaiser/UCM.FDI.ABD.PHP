@@ -61,8 +61,10 @@
                       value="Entrar">
               </div>
             </form>
-            <p style="">Todavia no tienes cuenta en <strong>Zone Music</strong>? <a href="signup.php">Registrate ahora</a></p>
     			</div>
+          <div class="entry">
+            <p style="">Todavia no tienes cuenta en <strong>Zone Music</strong>? <a href="signup.php">Registrate ahora</a></p>
+          </div>
     		</div>
       </div>
 

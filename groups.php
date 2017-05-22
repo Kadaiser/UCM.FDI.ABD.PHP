@@ -65,8 +65,8 @@
 					<h2>El mas visitado</h2>
 					<h3><?php echo $nameVisited; ?></h3>
 					<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($imgVisited).'" width="300" height="150" alt=""/>'; ?>
-					<p>Este grupo es un autentico TopTrending ahora mismo en <strong>Zone Music</strong>. Ha recibido mas de <?php echo  $visitValue;?> visitas desde que fue creado</p>
-					<p class="button"><a href="./groupview.php">Muestramelo</a></p>
+					<p>Este grupo es un autentico TopTrending ahora mismo en <strong>Zone Music</strong>. Ha recibido mas de <?php echo  $visitValue;?> visitas desde que fue creado, y su numero no deja de ascender!</p>
+					<?php echo '<p class="button"><a href="groupview.php?id='.strval($idVisited).'">Muestramelo</a></p>' ?>
 				</div>
 				<div id="column2">
 					<h2>El mas numeroso</h2>
@@ -74,14 +74,13 @@
 					<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($imgNumerous).'" width="300" height="150" alt=""/>'; ?>
 					<p>Este grupo es legion en <strong>Zone Music</strong>. dispone de mas de <?php echo  $menmbersValue;?> miembros actualmente, lo que le situa a la cabeza del grupo mas
 						grande de esta web</p>
-						<p class="button"><a href="./signup.php">Subcribirse</a></p>
+						<?php echo '<p class="button"><a href="groupview.php?id='.strval($idNumerous).'">Muestramelo</a></p>' ?>
 				</div>
 				<div id="column3">
 					<h2>El mas viejo</h2>
 					<p><img src="images/img08.jpg" width="300" height="150" alt="" /></p>
 					<p>Poseedor de la media de la edad mas elevada. Este grupo es para gente experimentada, que con la edad
 					ha refinado mucho su gusto. Y este es su grupo favorito!</p>
-					<p class="button"><a href="./groups.php">Muestramelo</a></p>
 				</div>
 			</div>
 
@@ -89,7 +88,7 @@
         <div class="post">
     			<div class="entry">
 						<?php
-							for ($i=0; $i < 2; $i++) {
+							for ($i=0; $i < count($rows); $i++) {
 								echo '<div class="GroupBoard">';
 								echo "<p>".$rows[$i][0]."</p>";
 								echo "<p>Miembros: ".$rows[$i][1]."</p>";

@@ -1,4 +1,5 @@
-<?php session_start();
+<?php
+  session_start();
 
 if(!isset($_SESSION['login'])){
   header("Location: ../fail.php");
@@ -7,6 +8,7 @@ if(!isset($_SESSION['login'])){
 include "./php/populateRollo.php";
 include "./php/populatePeople.php";
 include "./php/getGroupFromUser.php";
+include "./php/getMessagesForUser.php";
 ?>
 
 
@@ -47,18 +49,19 @@ include "./php/getGroupFromUser.php";
       <div id="page">
         <div class="post">
     			<h2 class="title"><a href="#">Bienvenido <?php echo $_SESSION['nick']; ?> </a></h2>
-    			<div class="entry">
             <p>Tu rollo es el <?php echo $_SESSION['rollo'];?></p>
-    			</div>
-          <div class="entry">
-            <p>Estas son las cosas que han estado ocurriendo mientras estabas fuera</p>
-    			</div>
     		</div>
         <br>
 
-        <div class="post">
-    			<div class="entry">
-    			</div>
+        <div class="messagesContainer">
+            <?php for ($i=0; $i < count($mess) ; $i++) {
+                echo '<div class="messageContainer">';
+                echo "<p class='from' >".$mess[$i][0]."</p>";
+                echo "<p class='topic'>".$mess[$i][1]."</p>";
+                echo "<p class='content'>".$mess[$i][2]."</p>";
+                echo "<p class='date'>".$mess[$i][3]."</p>";
+                echo "</div>";
+            } ?>
     		</div>
       </div>
 
