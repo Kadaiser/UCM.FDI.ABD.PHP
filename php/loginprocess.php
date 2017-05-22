@@ -4,7 +4,7 @@
   $nick = htmlspecialchars(trim(strip_tags($_POST['nickName'])));
   $userPassword = htmlspecialchars(trim(strip_tags($_POST['userPassword'])));
 
-  $conection = mysqli_connect('127.0.0.1','root','','melomanos') or die(header("Location: ../fail.php"));
+  $conection = mysqli_connect('127.0.0.1','root','','melomanos') or die(header("Location: ../fail.php?=DB_connection_fail"));
   mysqli_set_charset( $connection, 'utf8');
 
   $sql = "SELECT users.nick, users.pass, genres.name, users.id
@@ -14,7 +14,7 @@
           WHERE users.nick='".$nick."'
           ";
 
-  $query = mysqli_query($conection,$sql)  or die(header("Location: ../fail.php"));
+  $query = mysqli_query($conection,$sql)  or die(header("Location: ../fail.php?=DB_querry_fail"));
 
   mysqli_close($conection);
   $user=mysqli_fetch_object($query);
