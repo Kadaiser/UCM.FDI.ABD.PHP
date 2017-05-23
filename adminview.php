@@ -48,12 +48,38 @@ include "./php/populatePeople.php";
         <div class="post">
           <h1>Dar de alta grupo</h1>
           <form class="" action="./php/addGroup.php" method="post">
+
             <div class="group">
-              <input type="text"
-                    name="matter" class="field"
-                    required>
-              <span class="highlight"></span><span class="bar"></span>
-              <label id="passwordLabel">Nombre</label>
+              <label>Nombre</label>
+              <input type="text" name="GropuName" required>
+            </div>
+
+            <div class="group">
+              <label>Descripción</label>
+            <textarea name="content" rows="6" cols="20"
+              placeholder="Destinado a los amantes del genero XXXX entre los XX a XX"></textarea>
+            </div>
+
+            <div class="group">
+              <label>Edad Mínima</label>
+              <input type="number" name="minAge" required>
+            </div>
+
+            <div class="group">
+              <label>Edad Máxima</label>
+              <input type="number" name="maxAge" required>
+            </div>
+
+            <div class="group">
+              <label>Genero</label>
+              <select name="genre">
+                <option disabled selected value>--</option>
+                <?php echo $optionRollo;?>
+              </select>
+            </div>
+
+            <div class="group">
+              <input type="submit" value="Enviar">
             </div>
 
           </form>
